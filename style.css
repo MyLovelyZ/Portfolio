@@ -276,22 +276,23 @@ nav ul li a {
 /* Responsive Navigation */
 @media screen and (max-width: 768px) {
     nav {
-        width: 90%;
-        padding: 10px 20px;
-        opacity: 0;
+        width: 0%;
+        padding: 0px 0px;
+        opacity: 1;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
     }
 
     .menu-toggle {
         display: flex;
         position: fixed;
-        top: 25px;
+        top: 50px;
         right: 30px;
     }
 
     nav ul {
+        display: none;
         position: fixed;
-        top: 70px;
+        top: 0px;
         right: -100%;
         width: 200px;
         height: 100vh;
@@ -302,6 +303,10 @@ nav ul li a {
         padding: 40px 20px;
         transition: right 0.3s ease-in-out;
         z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 
     nav ul li {
@@ -392,6 +397,10 @@ nav ul li a {
 
     .project-title {
         font-size: 16px;
+    }
+
+    .project {
+        display: flex;
     }
 
     .project img {
