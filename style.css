@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background: #fff;
+    color: black;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff3131;
+    padding: 20px 60px;
+    border-radius: 30px;
+    z-index: 999;
+    width: 60%;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Home */
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 175px 70px 0px 70px;
+}
+
+.home-text{
+    font-size: 30px
+}
+
+.home-img {
+    justify-content: flex-end;
+    display: flex;
+
+}
+
+.home-img img {
+    display: flex;
+    width: 60%;
+    height: 60%;
+    border-radius: 20px
+}
+
+/* bagian tentang diriku */
+
+#about {
+    background-color: #fe434e;
+}
+
+#about {
+    padding: 80px 0;
+    color: #fff;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tentangku {
+    text-align: justify;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #fff;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* services */
+
+#services {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* bagian projects */
+
+#projects {
+    size: 10px;
+    display: flex;
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.project {
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 60%;
+  width: 80%;
+  max-width: 500px;
+  background-color: #fe434e;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  overflow: hidden;
+  padding: 30px;
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.project img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+  flex: 1;
+  padding-bottom: 10px;
+}
+
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h1 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/* bagian contact */
+
+#contact {
+    padding: 60px 20px;
+    background-color: #fe434e;
+    text-align: center;
+    color: white;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-icons a img {
+    width: 40px;
+    height: 40px;
+    filter: invert(100%);
+    transition: transform 0.3s ease;
+}
+
+.contact-icons a:hover img {
+    transform: scale(1.2);
+}
+
+/* buat responsive */
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background: #ff3131;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    nav {
+        width: 90%;
+        padding: 10px 20px;
+        opacity: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: fixed;
+        top: 25px;
+        right: 30px;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 200px;
+        height: 100vh;
+        background: #ff3131;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 40px 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    nav ul.show {
+        right: 0;
+    }
+}
+
+/* RESPONSIVE CONTENT */
+
+@media screen and (max-width: 1024px) {
+    #home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 120px 20px 0;
+    }
+
+    .home-img img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .home-text {
+        font-size: 24px;
+    }
+
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .sub-title {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .tab-titles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-links {
+        margin: 10px 0;
+    }
+
+    #projects {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 10px;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-icons {
+        gap: 20px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px 5%;
+    }
+
+    .home-text {
+        font-size: 20px;
+    }
+
+    .sub-title {
+        font-size: 28px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+    }
+
+    .project-title {
+        font-size: 16px;
+    }
+
+    .project img {
+        width: 100px;
+    }
+
+    #contact h2 {
+        font-size: 1.2rem;
+    }
+
+    .contact-icons a img {
+        width: 30px;
+        height: 30px;
+    }
+}

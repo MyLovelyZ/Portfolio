@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Muntazier</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">My Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="home">
+                <div class="home-text">
+                    <p>A Student of SMK Plus Pelita Nusantara</p>
+                    <h1>HI, Namaku <span>Zahir</span><br>Seorang Pelajar SMK</h1>
+                </div>
+                <div class="home-img">
+                    <img src="img/foto.jpg" alt="gambar home">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About -->
+     <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="tentangku">Halo! Namaku Muntazier Zahirudin Halim, aku adalah seorang pelajar smk berjurusan Rekayasa Perangkat Lunak (RPL) dari SMK PLUS PELITA NUSANTARA. Aku memiliki minat yang besar dalam bidang kecerdasan buatan (AI), machine learning. Selain itu, saya juga gemar mengeksplorasi dunia pengembangan game, khususnya menggunakan Roblox Studio. Cita-cita saya adalah melanjutkan pendidikan ke perguruan tinggi seperti ITB atau UI bahkan luar negeri.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-link" id="skills">
+                        <ul>
+                            <li><span>HTML&CSS</span></li>
+                            <li><span>Python</span></li>
+                            <li><span>PHP & Laravel</span></li>
+                            <li><span>Adobe Photoshop</span></li>
+                            <li><span>Figma</span></li>
+                            <li><span>Roblox Studio</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Tower Defense Game</span> : Membuat game simple di roblox</li>
+                            <li><span>Python</span> : Membuat password generator, game tebak angka</li>
+                            <li><span>PHP & Laravel</span> : Membuat sebuah website toko online</li>
+                            <li><span>Adobe Photoshop</span> : Membuat sebuah Wallpaper untuk chrome</li>
+                            <li><span>Figma</span> : Mendesign sebuah website</li>
+                            <li><span>Roblox Studio</span> : Membuat game tower defense sederhana</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>SDN Pabuaran 07 Cibinong</span></li>
+                            <li><span>SMP PGRI 1 Cibinong</span></li>
+                            <li><span>SMK PLUS PELITA NUSANTARA</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <section id="projects">
+        <div class="project">
+            <div class="project-title">Tower Defense Projects</div>
+            <img src="img/towerdefense.png" alt="">
+        </div>
+        <div class="project">
+            <div class="project-title">Webstore Using Laravel</div>
+            <img src="img/laravel.png" alt="">
+        </div>
+        <div class="project">
+            <div class="project-title">Password Generator</div>
+            <img src="img/passwordgen.png" alt="">
+        </div>
+     </section>
+     <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+        <a href="https://wa.me/6288901771700" target="_blank" title="WhatsApp">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://instagram.com/mylovelyzh" target="_blank" title="Instagram">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+        </a>
+        <a href="https://github.com/MyLovelyZ" target="_blank" title="GitHub">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
+        </a>
+    </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
