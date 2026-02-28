@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/output.css">
+    <script src="../src/js/alpine.js" type="module"></script>
+</head>
+<body x-data="{idk: false}">
+    <button @click="idk = !idk" class="text-red-800">Hello</button>
+    <p x-show="idk">My name is LovelyZ</p>
+</body>
+</html>
