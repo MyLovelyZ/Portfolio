@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="src/js/main.js" type="module"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
-<body class="bg-red-500" x-data="{isMenuOpen: false}">
-    <button @click="isMenuOpen = !isMenuOpen">tekan saya!!!</button>
-    <header x-show="isMenuOpen">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">My Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+<body class="font-sans bg-white text-black">
+    <header class="w-full h-screen">
+        <div class="py-2.5 px-[10%]">
+            <nav class="fixed top-5 left-1/2 -translate-x-1/2 bg-[#ff3131] px-15 py-5 rounded-[30px] z-999 w-[60%] max-w-225 shadow-[0_4px_10px_rgba(0,0,0,0.2)]">
+                <ul class="list-none flex justify-around items-center">
+                    <li><a href="#home" class="no-underline text-white font-bold">Home</a></li>
+                    <li><a href="#about" class="no-underline text-white font-bold">About Me</a></li>
+                    <li><a href="#projects" class="no-underline text-white font-bold">My Projects</a></li>
+                    <li><a href="#contact" class="no-underline text-white font-bold ">Contact</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle" onclick="toggleMenu()">
@@ -26,24 +26,24 @@
                 <div></div>
             </div>
 
-            <div id="home">
-                <div class="home-text">
+            <div class="flex items-center justify-between pt-43.75 px-17.5 pb-0" id="home">
+                <div class="text-[30px]">
                     <p>A Student of SMK Plus Pelita Nusantara</p>
                     <h1>HI, Namaku <span>Zahir</span><br>Seorang Pelajar SMK</h1>
                 </div>
-                <div class="home-img">
-                    <img src="img/foto.jpg" alt="gambar home">
+                <div class="justify-end flex">
+                    <img src="img/foto.jpg" alt="gambar home" class="flex w-[60%] h-[60%] rounded-[20px]">
                 </div>
             </div>
         </div>
     </header>
     <!-- About -->
-     <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-2" x-data="{ActiveLink: True, }">
-                    <h1 class="sub-title">About Me</h1>
-                    <p class="tentangku">Halo! Namaku Muntazier Zahirudin Halim, aku adalah seorang pelajar jurusan Rekayasa Perangkat Lunak (RPL) di SMK PLUS PELITA NUSANTARA. Aku memiliki minat yang besar dalam bidang kecerdasan buatan (AI), dan machine learning. Saya juga gemar mengeksplorasi dunia pengembangan game, khususnya menggunakan Roblox Studio. Cita-cita saya adalah melanjutkan pendidikan ke perguruan tinggi seperti ITB atau UI bahkan luar negeri.</p>
+     <section class="bg-[#fe434e] py-20 px-0 text-white" id="about">
+        <div class="py-2.5 px-[10%]">
+            <div class="flex justify-between flex-wrap">
+                <div class="basis-3/5" x-data="{ActiveLink: True, }">
+                    <h1 class="text-[60px] font-semibold text-white">About Me</h1>
+                    <p class="text-justify">Halo! Namaku Muntazier Zahirudin Halim, aku adalah seorang pelajar jurusan Rekayasa Perangkat Lunak (RPL) di SMK PLUS PELITA NUSANTARA. Aku memiliki minat yang besar dalam bidang kecerdasan buatan (AI), dan machine learning. Saya juga gemar mengeksplorasi dunia pengembangan game, khususnya menggunakan Roblox Studio. Cita-cita saya adalah melanjutkan pendidikan ke perguruan tinggi seperti ITB atau UI bahkan luar negeri.</p>
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" @click="ActiveLink = !ActiveLink">Skills</p>
