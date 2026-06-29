@@ -5,15 +5,17 @@ import About from "../sections/About";
 import Skills from "../sections/Skills";
 import Projects from "../sections/Projects";
 import Contact from "../sections/Contact";
+import Experience from "../sections/Experience";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-200">
+    <div className="min-h-screen text-gray-200">
       <Navbar />
 
       <main>
         <Hero />
-        <Skills />
+        <About />
+        <Experience />
       </main>
 
       <Footer />

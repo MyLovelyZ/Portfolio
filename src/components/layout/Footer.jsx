@@ -1,9 +1,6 @@
-// The footer shown at the bottom of every page.
-
 import { SITE, SOCIALS } from "../../constants";
 
 export default function Footer() {
-  // new Date().getFullYear() keeps the year current automatically.
   const year = new Date().getFullYear();
 
   return (

@@ -3,6 +3,7 @@ export const SITE = {
   name: "Zahir",
   role: "Full-Stack & Roblox Game Developer",
   email: "lovelyz4school@gmail.com",
+  interest: "Backend & Artificial Intelligence"
 };
 
 export const NAV_LINKS = [

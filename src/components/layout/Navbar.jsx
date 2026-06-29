@@ -1,17 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { SITE, NAV_LINKS } from "../../constants";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-800 bg-gray-900/80 backdrop-blur">
+    <header
+      className={`sticky top-0 z-50 border-b border-gray-800 bg-blue-950/90 backdrop-blur transition-all duration-300 ${
+        scrolled ? "m-0 rounded-none" : "m-3 rounded-3xl"
+      }`}
+    >
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#home" className="text-lg font-bold text-white">
+        <Link to="/" className="text-lg font-bold text-white">
           {SITE.name}
           <span className="text-indigo-500">.</span>
-        </a>
-        
+        </Link>
+
         <ul className="hidden gap-8 md:flex">
           {NAV_LINKS.map((item) => (
             <li key={item.href}>
@@ -23,6 +36,15 @@ export default function Navbar() {
               </a>
             </li>
           ))}
+
+          <li>
+            <Link
+              to="/projects"
+              className="text-sm text-gray-300 transition-colors hover:text-white"
+            >
+              Projects Page
+            </Link>
+          </li>
         </ul>
 
         <button
