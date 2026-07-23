@@ -3,7 +3,7 @@ import { SITE } from "../constants";
 export default function About() {
   return (
     <section id="about" className="mx-auto px-6 py-24 bg-blue-900 items-center flex">
-      <div className="space-y-4 text-gray-400">
+      <div className="space-y-4 text-gray-300">
         <h2 className="mb-8 text-2xl font-bold text-white">
           About Me
         </h2>

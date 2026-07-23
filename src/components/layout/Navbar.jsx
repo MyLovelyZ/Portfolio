@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-gray-800 bg-blue-950/90 backdrop-blur transition-all duration-300 ${
+      className={`sticky top-0 z-50 animate-fade-down motion-reduce:animate-none border-b border-gray-800 bg-blue-950/90 backdrop-blur transition-all duration-300 ${
         scrolled ? "m-0 rounded-none" : "m-3 rounded-3xl"
       }`}
     >
