@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="mt-8 flex animate-fade-up motion-reduce:animate-none gap-4 [animation-delay:600ms]">
           <Button href="#projects">View my work</Button>
           <Button href="#contact" variant="outline">
-            Get in touch
+            Get in touch ah testing doang ini
           </Button>
         </div>
       </div>
